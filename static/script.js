@@ -1,4 +1,10 @@
 (() => {
+  "use strict";
+
+  // API Base URL for Render deployment (leave empty string "" if hosting frontend and backend together)
+  // Example: const API_BASE = "https://your-app-name.onrender.com";
+  const API_BASE = "";
+
   const form = document.getElementById("riskForm");
   const submitBtn = document.getElementById("submitBtn");
   const errorNote = document.getElementById("errorNote");
@@ -36,7 +42,7 @@
   recalcPercent();
 
   // ---------- Service status check ----------
-  fetch("/openapi.json", { method: "GET" })
+  fetch(`${API_BASE}/openapi.json`, { method: "GET" })
     .then((res) => {
       if (res.ok) {
         apiDot.classList.add("ok");
@@ -141,7 +147,7 @@
     };
 
     try {
-      const res = await fetch("/predict", {
+      const res = await fetch(`${API_BASE}/predict`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
