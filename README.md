@@ -4,6 +4,8 @@
 
 **Credit Ledger** is a machine learning-powered web application for assessing consumer loan applications. It predicts the default probability of a loan applicant using an XGBoost model, evaluated with SHAP (SHapley Additive exPlanations) for interpretability, and presents the decision through a highly interactive, glassmorphism-styled modern web interface.
 
+🌐 **Live Application & API:** [https://credit-risk-prediction-system-3.onrender.com](https://credit-risk-prediction-system-3.onrender.com)
+
 ---
 
 ## 👨‍💻 Author
@@ -21,8 +23,15 @@
 ---
 
 ## 🛠️ Technology Stack
-- **Backend:** Python 3.12+, FastAPI, Uvicorn, Pydantic V2, Scikit-Learn, Pandas, XGBoost, Joblib.
+- **Backend:** Python 3.11+, FastAPI, Uvicorn, Pydantic V2, Scikit-Learn, Pandas, XGBoost, Joblib.
 - **Frontend:** HTML5, Vanilla JavaScript, CSS3 (CSS Grid, CSS Variables, Glassmorphism).
+
+---
+
+## 🌐 Live Application
+The live application is hosted and publicly accessible at:
+- **Web App:** [https://credit-risk-prediction-system-3.onrender.com](https://credit-risk-prediction-system-3.onrender.com)
+- **API Docs (Swagger UI):** [https://credit-risk-prediction-system-3.onrender.com/docs](https://credit-risk-prediction-system-3.onrender.com/docs)
 
 ---
 
@@ -42,16 +51,18 @@ Start the FastAPI server via Uvicorn:
 ```bash
 python -m uvicorn main:app --reload
 ```
-*Note: By default, the application will run on `http://127.0.0.1:8000`.*
 
 ### 4. Access the App
-Open your web browser and navigate to `http://127.0.0.1:8000`. The frontend is served directly by FastAPI.
+Open your web browser and navigate to:
+- **Live Deployment:** [https://credit-risk-prediction-system-3.onrender.com](https://credit-risk-prediction-system-3.onrender.com)
+- **Local Server:** `http://127.0.0.1:8000` (or `http://127.0.0.1:8080`)
 
 ---
 
 ## 📡 API Reference
 
 ### `POST /predict`
+Endpoint: `https://credit-risk-prediction-system-3.onrender.com/predict`
 Evaluates a loan applicant.
 
 **Request Body (JSON):**

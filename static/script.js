@@ -2,7 +2,7 @@
   "use strict";
 
   // API Base URL for Render deployment (leave empty string "" if hosting frontend and backend together)
-  const API_BASE = "http://127.0.0.1:8080";
+  const API_BASE = "https://credit-risk-prediction-system-3.onrender.com";
 
   const form = document.getElementById("riskForm");
   const submitBtn = document.getElementById("submitBtn");
